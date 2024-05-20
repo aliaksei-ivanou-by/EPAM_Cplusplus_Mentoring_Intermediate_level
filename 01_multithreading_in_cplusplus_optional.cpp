@@ -27,7 +27,7 @@ void writer(const std::string& target)
 {
     std::ofstream trgt(target, std::ios::binary);
     while (!done)
-	{
+    {
         std::this_thread::yield();
     }
     trgt.write(buffer.data(), buffer.size());
@@ -36,7 +36,7 @@ void writer(const std::string& target)
 int main(int argc, char* argv[])
 {
     if (argc != 3)
-	{
+    {
         std::cerr << "Parameters of the function " << argv[0] << " should be: <source> <target>.\n";
         return static_cast<int>(Errors::Wrong_Parameters);
     }
@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
     std::string target = argv[2];
 
     if (std::filesystem::exists(target))
-	{
+    {
         // TODO: Need to add flag processing
         std::cerr << "Target file exists.\n";
         return static_cast<int>(Errors::Target_File_Exists);

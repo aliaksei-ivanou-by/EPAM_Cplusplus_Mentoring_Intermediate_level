@@ -143,7 +143,7 @@ Client must use (at least) two specifications for Inner type:
 
 - One for reader.
 - One for encryption.
-- 
+
 Server side must have at least two specification:
 
 - One for decryption.

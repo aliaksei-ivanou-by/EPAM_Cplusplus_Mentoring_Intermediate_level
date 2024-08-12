@@ -40,7 +40,7 @@ Read description of Module: Multithreading in C++
 
 Your task is to rework the copy tool in the next manner:
 
-1. Your tool should now accept 3 parameters <source> <destination> <name of shared memory object>.
+1. Your tool should now accept 3 parameters ```<source> <destination> <name of shared memory object>```.
 2. When run your tool by script twice.
 2.1. First exemplar of executed tools should act as a reader of source file.
 2.2. Second exemplar of executed tools should act as a writer of destination file.

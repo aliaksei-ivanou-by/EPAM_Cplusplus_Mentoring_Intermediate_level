@@ -51,13 +51,9 @@ constexpr std::size_t MAX_BLOCKS = 4;
 class CopyQueue
 {
 public:
-    CopyQueue()
-    {
-        for (std::size_t i = 0; i < MAX_BLOCKS; ++i)
-        {
-            m_availableBuffers.emplace(std::vector<char>(BUFFER_SIZE));
-        }
-    }
+    CopyQueue():
+        m_availableBuffers{ { MAX_BLOCKS, std::vector<char>(BUFFER_SIZE) }  }	
+    {}
     void add_buffer_to_write_queue(std::vector<char> values, std::size_t size)
     {
         std::unique_lock<std::mutex> lock(m_mutex);

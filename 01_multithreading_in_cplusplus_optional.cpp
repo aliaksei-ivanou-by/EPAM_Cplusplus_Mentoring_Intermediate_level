@@ -38,7 +38,6 @@ void sendErrorMessage(const char* format, ...)
         va_end(args);
 
         std::cerr << "Error: " << buf.data() << "\n";
-        std::cerr << "Error occurred at: " << __FILE__ << ":" << __LINE__ << "\n";
     }
     catch (const std::exception& error)
     {
